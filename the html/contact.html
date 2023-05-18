@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BackPack</title>
+    <!--font awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!--fonts-->
+    <link rel="stylesheet" href="fonts.css" />
+    <!--normalize-->
+    <link rel="stylesheet" href="normalize.css" />
+    <!--custom-->
+    <link rel="stylesheet" href="responsive.css" />
+    <link rel="stylesheet" href="utility.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!--navbar-->
+    <nav class="navbar">
+      <div class="container flex">
+        <a href="home.html" class="site-brand"> Back<span> Pack </span> </a>
+        <button type="button" id="navbar-show-button" class="flex">
+          <i class="fas fa-bars"></i>
+          <!--dire hadoke khtote t3 les buttons-->
+        </button>
+        <div id="navbar-collapse">
+          <button type="button" id="navbar-close-button" class="flex">
+            <i class="fas fa-times"></i>
+          </button>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="home.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="try.html" class="nav-link">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a href="blog.html" class="nav-link">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a href="about.html" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--end of nav-->
+
+    <!--header-->
+    <header class="flex">
+      <div class="container">
+        <div class="header-title">
+          <h1>contact</h1>
+          <p>feel free to contact us whenever u want</p>
+        </div>
+      </div>
+    </header>
+
+    <!---end of aboutpage-->
+    <!-- contact section -->
+    <section id="contact" class="py-4">
+      <div class="container">
+        <div class="title-wrap">
+          <span class="sm-title">get in touch with us</span>
+          <h2 class="lg-title">contact us</h2>
+        </div>
+
+        <div class="contact-row">
+          <div class="contact-left">
+            <form class="contact-form">
+              <input type="text" class="form-control" placeholder="Your name" />
+              <input
+                type="email"
+                class="form-control"
+                placeholder="Your email"
+              />
+              <textarea
+                rows="4"
+                class="form-control"
+                placeholder="Your message"
+                style="resize: none"
+              ></textarea>
+              <input type="submit" class="btn" value="Send message" />
+            </form>
+          </div>
+          <div class="contact-right my-2">
+            <div class="contact-item">
+              <span class="contact-icon flex">
+                <i class="fa fa-phone-alt"></i>
+              </span>
+              <div>
+                <span>Phone</span>
+                <p class="text">+01-584-886-009</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon flex">
+                <i class="fa fa-map-marked-alt"></i>
+              </span>
+              <div>
+                <span>Address</span>
+                <p class="text">102 East 22nd Street, NY</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon flex">
+                <i class="fa fa-envelope"></i>
+              </span>
+              <div>
+                <span>Message</span>
+                <p class="text">kacelferiel0503@gmail.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end of contact section -->
+
+    <!--footer-->
+    <footer class="py-4">
+      <div class="container footer-row">
+        <div class="footer-item">
+          <a href="home.html" class="site brand"> Back<span>Pack</span> </a>
+          <p class="text">
+            "Backpack travel agencies offer budget-friendly packages and unique
+            experiences that guide adventurous souls to new and exciting
+            destinations, creating unforgettable travel memories."
+          </p>
+        </div>
+        <div class="footer-item">
+          <h2>Follow us on :</h2>
+          <ul class="social-links">
+            <li>
+              <a href="#"> <i class="fab fa-facebook-f"></i></a>
+            </li>
+            <li>
+              <a href="#"> <i class="fab fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href="#"> <i class="fab fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="#"> <i class="fab fa-google-plus"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-item">
+          <h2>Popular Places</h2>
+          <ul>
+            <li><a href="#">Thailand</a></li>
+            <li><a href="#">Australia</a></li>
+            <li><a href="#">Maldives</a></li>
+            <li><a href="#">Switzerland</a></li>
+            <li><a href="#">Germany</a></li>
+          </ul>
+        </div>
+        <div class="Subscribe-form footer-item">
+          <h2>Sunscribe for newsletter!</h2>
+          <form class="flex">
+            <input
+              type="email"
+              placeholder="Enter Email"
+              class="form-control"
+            />
+            <input type="submit" class="btn" value="subscribe" />
+          </form>
+        </div>
+      </div>
+    </footer>
+    <!--js-->
+    <script src="script.js"></script>
+  </body>
+</html>
