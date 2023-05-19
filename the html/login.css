@@ -105,6 +105,13 @@ h2 {
   font-weight: 500;
   margin: 25px 0 10px;
 }
+.logout-register {
+  font-size: 0.9rem;
+  color: black;
+  text-align: center;
+  font-weight: 500;
+  margin: 25px 0 10px;
+}
 .input-box label {
   position: absolute;
   top: 50%;
@@ -189,6 +196,21 @@ h2 {
   font-weight: 600;
 }
 .login-register p a:hover {
+  text-decoration: underline;
+}
+.logout-register {
+  font-size: 0.9rem;
+  color: black;
+  text-align: center;
+  font-weight: 500;
+  margin: 25px 0 10px;
+}
+.logout-register p a {
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+}
+.logout-register p a:hover {
   text-decoration: underline;
 }
 .icon-close {

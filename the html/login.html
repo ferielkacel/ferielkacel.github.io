@@ -25,12 +25,12 @@
       <h2 class="logo">Back Pack</h2>
 
       <nav class="navigation">
-        <a href="#">home</a>
-        <a href="#">gallery</a>
-        <a href="#">blog</a>
-        <a href="#">about</a>
-        <a href="#">contact</a>
-        <button class="btnlogin-popup">login</button>
+        <a href="home.html">home</a>
+        <a href="try.html">gallery</a>
+        <a href="blog.html">blog</a>
+        <a href="about.html">about</a>
+        <a href="contact.html">contact</a>
+        <button class="btnlogin-popup" href="login.html">login</button>
       </nav>
     </header>
 
@@ -45,26 +45,35 @@
             <span class="icon">
               <ion-icon name="mail-outline"></ion-icon>
             </span>
-            <input type="email" required />
+            <input type="email" class="loginemail" required />
             <label>email</label>
           </div>
           <div class="input-box">
             <span class="icon">
               <ion-icon name="bag-outline"></ion-icon>
             </span>
-            <input type="password" required />
+            <input type="password" class="loginpassword" required />
             <label>password</label>
           </div>
           <div class="rememeber-forgot">
-            <label><input type="checkbox" />Remember me </label>
+            <label
+              ><input type="checkbox" class="remember" />Remember me
+            </label>
             <p>jjjjjjjjjjjjjjjjjjjj</p>
             <a href="#">forgot password</a>
           </div>
-          <button type="submit" class="btn">login</button>
+          <button type="submit" class="btn" id="loginbtn">login</button>
+          <div class="login-register"></div>
+
           <div class="login-register">
             <p>
               dont have an account?
               <a href="#" class="register-link">Register</a>
+            </p>
+          </div>
+          <div class="logout-register">
+            <p>
+              <a href="#" class="register-link">logout</a>
             </p>
           </div>
         </form>
@@ -77,39 +86,42 @@
             <span class="icon">
               <ion-icon name="person-outline"></ion-icon>
             </span>
-            <input type="text" required />
+            <input type="text" class="signupusername" required />
             <label>username</label>
           </div>
           <div class="input-box">
             <span class="icon">
               <ion-icon name="mail-outline"></ion-icon>
             </span>
-            <input type="email" required />
+            <input type="email" class="signupemail" required />
             <label>email</label>
           </div>
           <div class="input-box">
             <span class="icon">
               <ion-icon name="bag-outline"></ion-icon>
             </span>
-            <input type="password" required />
+            <input type="password" class="signuppassword" required />
             <label>password</label>
           </div>
           <div class="rememeber-forgot">
             <label
-              ><input type="checkbox" />i agree to the term & conditions
+              ><input type="checkbox" class="terms" />i agree to the term &
+              conditions
             </label>
             <p>jjjjjjjjjjjjjjjjjjj</p>
           </div>
-          <button type="submit" class="btn">Register</button>
+          <button type="submit" class="btn" id="signupbtn">Register</button>
           <div class="login-register">
             <p>
               already have an account?
               <a href="#" class="login-link">login</a>
             </p>
+            <br />
           </div>
         </form>
       </div>
     </div>
     <script src="login.js"></script>
+    <script src="account.js"></script>
   </body>
 </html>
