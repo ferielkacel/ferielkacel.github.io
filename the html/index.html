@@ -54,6 +54,9 @@
             <li class="nav-item">
               <a href="login.html" class="nav-link">login</a>
             </li>
+            <li class="nav-item">
+              <a href="logout.html" class="nav-link">logout</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -69,16 +72,37 @@
         </div>
         <div class="header-form">
           <h2>Choose your Travel location:</h2>
-          <form class="flex">
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Destination name"
-            />
-            <input type="date" class="form-control" placeholder="Date" />
-            <input type="number" class="form-control" placeholder="Price ($)" />
-            <input type="submit" class="btn" value="Search" />
-          </form>
+          <div class="search-container" id="travelForm">
+            <form class="flex">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Destination name"
+                id="locationinput"
+                required
+              />
+              <input
+                type="date"
+                class="form-control"
+                placeholder="Date"
+                id="dateinput"
+                required
+              />
+              <input
+                type="number"
+                class="form-control"
+                placeholder="Price ($)"
+                id="priceinput"
+                required
+              />
+              <input
+                type="submit"
+                class="btn"
+                value="Search"
+                id="searchbutton"
+              />
+            </form>
+          </div>
         </div>
       </div>
     </header>
@@ -431,7 +455,7 @@
           </ul>
         </div>
         <div class="Subscribe-form footer-item">
-          <h2>Sunscribe for newsletter!</h2>
+          <h2>Subscribe for newsletter!</h2>
           <form class="flex">
             <input
               type="email"
@@ -439,12 +463,15 @@
               class="form-control"
             />
             <input type="submit" class="btn" value="subscribe" />
+            <p id="message"></p>
           </form>
         </div>
       </div>
     </footer>
     <!--js-->
     <script src="script.js"></script>
+    <script src="travel.js"></script>
+    <scrip src="result.html"></scrip>
     <script>
       let video = document.querySelector(".video-wrapper video");
       document.getElementById("play-btn");

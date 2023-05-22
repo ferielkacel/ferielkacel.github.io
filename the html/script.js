@@ -39,3 +39,4 @@ window.addEventListener("resize", () => {
     document.body.classList.remove("resize-animation-stopper");
   }, 400);
 });*/
+/*page t3 maldives*/

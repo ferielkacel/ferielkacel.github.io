@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Spain Travel Blog</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+      }
+
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+
+      .blog-post {
+        margin-bottom: 40px;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 20px;
+      }
+
+      .blog-post h2 {
+        color: #555;
+      }
+
+      .blog-post p {
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>My Spain Travel Blog</h1>
+
+    <div id="blog-container"></div>
+
+    <h2>Create a New Blog Post</h2>
+    <form id="blog-form">
+      <label for="title">Title:</label>
+      <input type="text" id="title" required />
+      <br />
+      <label for="content">Content:</label>
+      <textarea id="content" required></textarea>
+      <br />
+      <button type="submit">Submit</button>
+    </form>
+
+    <script>
+      // Function to render the saved blog posts
+      function renderBlogPosts() {
+        const blogContainer = document.getElementById("blog-container");
+        blogContainer.innerHTML = ""; // Clear the container
+
+        // Retrieve the saved blog posts from Local Storage
+        const savedPosts = JSON.parse(localStorage.getItem("blogPosts")) || [];
+
+        // Loop through the saved posts and create HTML elements for each post
+        savedPosts.forEach((post) => {
+          const postElement = document.createElement("div");
+          postElement.classList.add("blog-post");
+
+          const titleElement = document.createElement("h2");
+          titleElement.textContent = post.title;
+
+          const contentElement = document.createElement("p");
+          contentElement.textContent = post.content;
+
+          postElement.appendChild(titleElement);
+          postElement.appendChild(contentElement);
+
+          blogContainer.appendChild(postElement);
+        });
+      }
+
+      // Function to handle form submission
+      function handleFormSubmit(event) {
+        event.preventDefault();
+
+        // Get the values from the form
+        const titleInput = document.getElementById("title");
+        const contentInput = document.getElementById("content");
+
+        const title = titleInput.value;
+        const content = contentInput.value;
+
+        // Create a new blog post object
+        const newPost = {
+          title: title,
+          content: content,
+        };
+
+        // Retrieve the existing saved blog posts or initialize an empty array
+        const savedPosts = JSON.parse(localStorage.getItem("blogPosts")) || [];
+
+        // Add the new post to the array
+        savedPosts.push(newPost);
+
+        // Save the updated posts array back to Local Storage
+        localStorage.setItem("blogPosts", JSON.stringify(savedPosts));
+
+        // Clear the form inputs
+        titleInput.value = "";
+        contentInput.value = "";
+
+        // Render the updated blog posts
+        renderBlogPosts();
+      }
+
+      // Add event listener to the form submit button
+      const blogForm = document.getElementById("blog-form");
+      blogForm.addEventListener("submit", handleFormSubmit);
+
+      // Initial rendering of the blog posts
+      renderBlogPosts();
+    </script>
+  </body>
+</html>

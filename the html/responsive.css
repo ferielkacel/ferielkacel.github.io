@@ -162,15 +162,20 @@ header-form .form-control,
 }
 */
 .test-row,
-.about-row,
-.about-row,
 .facts-row,
 .contact-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
-
+.about-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+.about-left {
+  margin: 0;
+}
 @media screen and (min-width: 1200px) {
   .test-row .gallery-row .blog-row .about-row {
     grid-template-columns: repeat(3, 1fr);

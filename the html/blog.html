@@ -49,7 +49,7 @@
               <a href="about.html" class="nav-link">About</a>
             </li>
             <li class="nav-item">
-              <a href="home.html" class="nav-link">Contact</a>
+              <a href="contact.html" class="nav-link">Contact</a>
             </li>
             <li class="nav-item">
               <a href="login.html" class="nav-link">login</a>
@@ -92,15 +92,17 @@
           <div class="blog-item my-2 shadow">
             <div class="blog-item-top">
               <img src="images/blog-1.jpg" alt="blog" />
-              <span class="blog-date">oct 28, 2021</span>
+              <button onclick="redirectToPage()">
+                <span class="blog-date">oct 28, 2021</span>
+              </button>
             </div>
             <div class="blog-item-bottom">
-              <span>travel | john doe</span>
+              <span>enola holmes</span>
               <a href="#"></a>
               <p class="text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Distinctio voluptatem nulla harum accusantium tempora dicta quas
-                quod id, repellat temporibus illo libero explicabo laboriosam.
+                The Maldives: A tropical paradise of pristine beaches and
+                crystal-clear waters. Explore its natural beauty, indulge in
+                luxury, and create unforgettable memories.
               </p>
             </div>
           </div>
@@ -108,18 +110,15 @@
           <div class="blog-item my-2 shadow">
             <div class="blog-item-top">
               <img src="images/blog-2.jpg" alt="blog" />
-              <span class="blog-date">oct 28, 2021</span>
+              <button onclick="redirectToPage1()">
+                <span class="blog-date">nov 28, 2022</span>
+              </button>
             </div>
             <div class="blog-item-bottom">
-              <span>travel | john doe</span>
-              <a href="#"
-                >Lorem, ipsum dolor sit amet consectetur adipisicing elit?</a
-              >
-              <p class="text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Distinctio voluptatem nulla harum accusantium tempora dicta quas
-                quod id, repellat temporibus illo libero explicabo laboriosam.
-              </p>
+              <span> john doe</span>
+              <a>how to choose cafeterias</a>
+
+              <p class="text"></p>
             </div>
           </div>
 
@@ -289,6 +288,16 @@
     </footer>
     <!--end of footer-->
     <!--js-->
+    <script>
+      function redirectToPage() {
+        window.location.href = "maldives.html";
+      }
+    </script>
+    <script>
+      function redirectToPage1() {
+        window.location.href = "cafeteria.html";
+      }
+    </script>
     <script src="script.js"></script>
   </body>
 </html>

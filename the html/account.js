@@ -71,3 +71,15 @@ loginbutton.addEventListener("click", function (event) {
     alert("Please provide a username and password.");
   }
 });
+
+// Retrieve the data from local storage
+const userData = localStorage.getItem("user");
+
+// Check if the data exists
+if (userData !== null) {
+  // Data exists in local storage
+  console.log("Data exists:", user);
+} else {
+  // Data does not exist in local storage
+  console.log("Data does not exist");
+}

@@ -443,24 +443,6 @@ header.header-sm {
   transition: var(--trans);
 }
 
-.gallery-item:hover img {
-  transform: scale(1, 2);
-}
-.zoom-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 2rem;
-  color: white;
-  z-index: 2;
-  opacity: 0;
-  transition: var(--trans);
-}
-
-.gallery-item:hover .zoom-icon {
-  opacity: 1;
-}
 /*image modal box*/
 #img-modal-box {
   position: fixed;
@@ -476,7 +458,7 @@ header.header-sm {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  /*transform: translate(-50%, -50%);*/
   width: 80%;
   max-width: 800px;
 }
@@ -491,7 +473,7 @@ header.header-sm {
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  transition: var(--trans);
+  /*transition: var(--trans);*/
   border: none;
 }
 
@@ -629,6 +611,7 @@ header.header-sm {
   background-image: url(structure-articles-corde-voyage.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  min-height: 80vh;
 }
 #facts .sm-title {
   color: rgb(255, 255, 255);
@@ -636,6 +619,7 @@ header.header-sm {
 }
 .facts-item {
   text-align: center;
+  padding: 2rem 0;
 }
 .facts-info strong {
   font-size: 2rem;
