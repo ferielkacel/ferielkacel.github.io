@@ -1,0 +1,666 @@
+/*In summary, :root is a CSS pseudo-class selector that allows you to target the root element of a document and apply styles that will affect all elements on the page */
+:root {
+  --green: #18b9a9;
+  --light-grey: #f7f7f7;
+  --dark: #0e1010;
+  --trans: all 0.3s ease-in-out;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: transparent;
+  padding: 1rem 0;
+  z-index: 999;
+}
+.navbar .container {
+  justify-content: space-between;
+}
+.site-brand {
+  color: aliceblue;
+  font-size: 2.4rem;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-weight: 600;
+  opacity: 0.95;
+}
+.site-brand span {
+  font-weight: 300;
+}
+#navbar-show-button {
+  background: transparent;
+  color: aliceblue;
+  opacity: 0.9;
+  transition: var(--trans);
+}
+#navbar-show-button:hover {
+  opacity: 1;
+}
+
+/*navbar side menu*/
+#navbar-collapse {
+  background-color: var(--green);
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  line-height: 60px;
+  height: 100%;
+  padding: 2rem;
+  transform: translateX(100%);
+  transition: var(--trans);
+}
+.navbar-collapse-rmw {
+  transform: translateX(0) !important;
+}
+#navbar-close-button {
+  background: none;
+  color: aliceblue;
+  width: 35px;
+  height: 35px;
+  border-radius: 0.2rem;
+  font-size: 2rem;
+  transition: var(--trans);
+  position: absolute;
+  right: 1rem;
+  top: 2rem;
+  border: none;
+}
+#navbar-close-button:hover {
+  background-color: aliceblue;
+  color: #1ec6b6;
+}
+.navbar-nav {
+  margin-top: 5rem;
+}
+.nav.item {
+  margin: 1.6rem 0;
+}
+.nav-link {
+  color: aliceblue;
+  font-size: 1.2rem;
+  transition: var(--trans);
+}
+.nav-link:hover {
+  opacity: 0.8;
+}
+
+/*header*/
+header {
+  min-height: 100vh;
+  padding-top: 7rem;
+  background: linear-gradient(rgb(0, 0, 0.4) rgb(0, 0, 0, 0.4));
+  background-image: url(header-bg.png);
+  background-repeat: 0;
+  background-size: cover;
+  flex-direction: column;
+  color: aliceblue;
+  text-align: center;
+}
+.header-title h1 {
+  font-size: 2.8rem;
+  letter-spacing: 2px;
+  animation: bounce-in-top 1.1s both;
+}
+.header-title p {
+  margin: 1.8rem auto;
+  max-width: 700px;
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 1.7;
+}
+
+@keyframes bounce-in-top {
+  0% {
+    transform: translateY(-500px);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+    transform: translateY(0px);
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  55% {
+    transform: translateY(-65x);
+    animation-timing-function: ease-in;
+  }
+  72% {
+    transform: translateY(0px);
+    animation-timing-function: ease-in;
+  }
+  81% {
+    transform: translateY(-28px);
+    animation-timing-function: ease-in;
+  }
+  90% {
+    transform: translateY(0px);
+    animation-timing-function: ease-in;
+  }
+  95% {
+    transform: translateY(-8px);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: translateY(0px);
+    animation-timing-function: ease-out;
+  }
+}
+
+.header-form {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 3rem;
+  border-radius: 0.2rem;
+}
+.header-form h3 {
+  font-size: 1.2rem;
+}
+.header-form form {
+  flex-direction: column;
+  margin-top: 1.8rem;
+}
+.header-form form .form-control {
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.4);
+}
+.header-form input[type="date"] {
+  text-transform: uppercase;
+}
+.header-form input:not([type="submit"])::placeholder {
+  color: aliceblue;
+}
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+.header-form .btn {
+  margin-top: 0.8rem;
+}
+/*change navbar on scroll*/
+.navbar-cng {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 4px 5px 0 rgba(48, 48, 48, 0.2);
+  transition: var(--trans);
+}
+.navbar-cng .site-brand {
+  color: var(--dark);
+}
+.navbar-cng .site-brand span {
+  color: var(--green);
+}
+
+.navbar-cng #navbar-show-button {
+  color: var(--green);
+}
+
+/*featured*/
+.featured-item {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  transition: var(--trans);
+}
+.featured-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    transparent 18%,
+    rgba(0, 0, 0, 0.8) 99%,
+    rgb(0, 0, 0, 0.7) 100%
+  );
+}
+.featured-item-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  color: white;
+  width: 100%;
+  padding: 1rem;
+  transform: translateY(95%);
+  transition: var(--trans);
+}
+.featured-item-content span {
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: 1.2rem;
+  text-transform: capitalize;
+}
+
+.featured-item-content text {
+  color: white;
+  transition: var(--trans);
+}
+.featured-item:hover .featured-item-content {
+  transform: translateY(0); /*tl3a paga*/
+}
+/*services*/
+#services {
+  background: linear-gradient(rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0.5));
+  background-image: url(touriste-assis-point-vue-phu-sub-lek-au-coucher-du-soleil-lopburi-thailande.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+#services {
+  color: white;
+}
+.services-item {
+  text-align: center;
+  padding: 2rem 0.5rem;
+  margin: 2rem 0;
+}
+.services-icon {
+  font-size: 3.2rem;
+}
+
+.services-item h3 {
+  font-size: 1.6rem;
+  margin: 1rem 0;
+}
+
+.services-item .btn {
+  font-size: 1.6rem;
+  display: inline-block;
+}
+/*testimanials*/
+#testimonials {
+  background-color: var(--light-grey);
+}
+.test-item {
+  border: 2px solid var(--light-grey);
+  padding: 2rem 1rem;
+  position: relative;
+  background-color: white;
+  border-radius: 0.2rem;
+  margin: 2rem 0 14rem 0;
+}
+.test-item::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid rgb(255, 255, 255);
+}
+.test-item-info {
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.test-item-info img {
+  width: 100px;
+  height: 100px;
+  border-radius: 95%;
+  margin: 1rem;
+}
+
+.test-item-info h3 {
+  font-size: 1rem;
+}
+
+/*vedio*/
+.video-wrapper {
+  height: 500px;
+  position: relative;
+}
+.video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#play-btn {
+  position: absolute;
+  z-index: 5;
+  width: 70px;
+  height: 70px;
+  background-color: var(--trans);
+  color: rgb(63, 176, 204);
+  border-radius: 50%;
+  font-size: 1.8rem;
+  padding-left: 0.4rem;
+  transition: var(--trans);
+}
+#play-btn:hover {
+  transform: scale(1.1);
+}
+
+footer {
+  background-color: var(--dark);
+  color: azure;
+  text-align: center;
+  position: relative;
+}
+footer::before {
+  content: "";
+  position: absolute;
+  background-color: var(--green);
+  height: 4px;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+footer .site-brand {
+  margin-bottom: 1.5rem;
+  display: block;
+  font-size: 2rem !important;
+}
+.footer-item {
+  margin: 3rem 0;
+}
+.footer-item a {
+  font-size: 1.2rem;
+  color: azure;
+  transition: var(--trans);
+}
+.footer-item ul {
+  padding: 0;
+}
+.footer-item h2 {
+  margin-bottom: 1.4rem 0;
+}
+
+.footer-item a:hover {
+  color: var(--green);
+}
+
+.footer-item:nth-child(3) li {
+  margin: 0.5rem 0;
+}
+.footer-item:nth-child(3) a {
+  display: inline-block;
+  font-size: 1rem;
+  opacity: 0.7;
+}
+.social-links {
+  display: flex;
+  justify-content: center;
+}
+
+.social-links li {
+  margin: 0.5rem;
+}
+.subscribe-form form {
+  flex-direction: column;
+}
+.subscribe-form form input {
+  width: 100%;
+  max-width: 300px;
+}
+
+.subscribe-form .form-control {
+  border-color: rgba(255, 255, 255, 0.3);
+  transition: var(--trans);
+}
+
+.subscribe-form .form-control:focus {
+  border-color: azure;
+}
+.subscribe-form form input[type="email"]::placeholder {
+  color: white;
+  opacity: 0.3;
+}
+
+/*gallery page*/
+header.header-sm {
+  min-height: 60vh;
+}
+
+/*gallery*/
+.gallery-item {
+  margin: 2rem 0;
+  overflow: hidden;
+  position: relative;
+  transition: var(--trans);
+  cursor: pointer;
+}
+
+.gallery-item::after {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    transparent 18%,
+    /* rgba(253, 249, 249, 0.8) 99%,*/ /* rgba(255, 255, 255, 0.8) 100%*/
+  );
+}
+.gallery-item img {
+  transition: var(--trans);
+}
+
+/*image modal box*/
+#img-modal-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 999;
+  display: none;
+}
+#img-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /*transform: translate(-50%, -50%);*/
+  width: 80%;
+  max-width: 800px;
+}
+#img-modal img {
+  max-width: 100%;
+  height: 100%;
+}
+#img-modal-box button {
+  position: absolute;
+  font-size: 1.4rem;
+  background-color: white;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  /*transition: var(--trans);*/
+  border: none;
+}
+
+#img-modal-box button:hover {
+  opacity: 0.9;
+}
+#modal-close-btn {
+  top: -17px;
+  right: -17px;
+  z-index: 999;
+}
+#next-btn {
+  bottom: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+}
+#prev-btn {
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+}
+#next-btn:hover,
+#prev-btn:hover {
+  background-color: var(--dark);
+  color: azure;
+}
+/*popular section*/
+#popular.py-4 {
+  padding-bottom: relative;
+  cursor: pointer;
+  overflow: hidden;
+  transition: var(--trans);
+}
+.popular-item::after {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    transparent 18%,
+    rgba(255, 251, 251, 0.8) 99%,
+    /* rgba(255, 250, 250, 0.8) 100%*/
+  );
+}
+/*
+.popular-item div {
+  position: absolute;
+  color: #fff;
+  z-index: 2;
+  bottom: -500%;
+
+  width: 100%;
+  padding: 2rem;
+
+  transition: var(--trans);
+}
+.popular-item .rating {
+  justify-content: flex-start;
+  margin: 0.7rem 0;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  padding: 0;
+}
+.popular-item:hover div {
+  background-color: #fff;
+  color: #000;
+  bottom: 0;
+  opacity: 0.95;
+}
+*/
+
+/*blog page*/
+#blog {
+  background-color: white;
+}
+.blog-item {
+  background-color: white;
+  transition: var(--trans);
+}
+.blog-item-top {
+  position: relative;
+}
+.blog-date {
+  position: absolute;
+  background-color: #1ec6b6;
+  color: white;
+  padding: 0.5rem;
+  height: 38px;
+  min-width: 160px;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  bottom: -19px;
+  left: 5px;
+}
+.blog-item-bottom {
+  padding: 2rem 1rem;
+}
+.blog-item-bottom span {
+  text-transform: uppercase;
+  color: var(--dark);
+  opacity: 0.7;
+  letter-spacing: 2px;
+  display: block;
+  margin-top: 1rem;
+}
+.blog-item-bottom a {
+  margin: 1rem 0;
+  font-size: 1.4rem;
+  display: block;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 600;
+  line-height: 1.6rem;
+  transition: var(--trans);
+}
+.blog-item-bottom a:hover {
+  opacity: 0.8rem;
+}
+
+/*about page*/
+.about-right .text {
+  margin-bottom: 1rem;
+}
+.about-right h2 {
+  margin-bottom: 2.5rem;
+}
+
+/*about html*/
+#facts {
+  background: linear-gradient(black);
+  background-image: url(structure-articles-corde-voyage.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 80vh;
+}
+#facts .sm-title {
+  color: rgb(255, 255, 255);
+  font-weight: 800;
+}
+.facts-item {
+  text-align: center;
+  padding: 2rem 0;
+}
+.facts-info strong {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+.facts-icon {
+  font-size: x-large;
+}
+.facts-info .text {
+  text-transform: uppercase;
+}
+
+/*contact page*/
+
+.contact-form .form-control {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #000;
+  display: block;
+  margin: 1.6rem auto;
+}
+.contact-form .btn {
+  display: block;
+  margin: auto;
+}
+.contact-icon {
+  background-color: var(--green);
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: 1rem auto;
+  font-size: 2rem;
+}
+.contact-item {
+  text-align: center;
+  margin: 3rem 0;
+}
+.contact-item div span {
+  font-weight: 600;
+  font-family: "Ralway", sans-serif;
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: 1rem;
+}

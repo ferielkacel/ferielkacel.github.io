@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BackPack</title>
+    <!--font awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!--fonts-->
+    <link rel="stylesheet" href="fonts.css" />
+    <!--normalize-->
+    <link rel="stylesheet" href="normalize.css" />
+    <!--custom-->
+    <link rel="stylesheet" href="responsive.css" />
+    <link rel="stylesheet" href="utility.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!--navbar-->
+    <nav class="navbar">
+      <div class="container flex">
+        <a href="home.html" class="site-brand"> Back<span> Pack </span> </a>
+        <button type="button" id="navbar-show-button" class="flex">
+          <i class="fas fa-bars"></i>
+          <!--dire hadoke khtote t3 les buttons-->
+        </button>
+        <div id="navbar-collapse">
+          <button type="button" id="navbar-close-button" class="flex">
+            <i class="fas fa-times"></i>
+          </button>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="try.html" class="nav-link">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a href="blog.html" class="nav-link">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a href="about.html" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a href="login.html" class="nav-link">login</a>
+            </li>
+            <li class="nav-item">
+              <a href="logout.html" class="nav-link">logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--end of nav-->
+
+    <!--header-->
+    <header class="flex header-sm">
+      <div class="container">
+        <div class="header-title">
+          <h1>Gallery</h1>
+          <p>
+            These travel photos, taken by our clients, capture the essence of
+            their adventures and showcase the beauty and diversity of our world.
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <!--end of header-->
+    <!--gallery section-->
+    <div id="gallery" class="py-4">
+      <div class="container">
+        <div class="gallery-row">
+          <div class="gallery-item shadow">
+            <img src="gallery-1.jpg" />
+          </div>
+          <div class="gallery-item shadow">
+            <img src="gallery-2.jpg" />
+          </div>
+          <div class="gallery-item shadow">
+            <img src="gallery-3.jpg" />
+          </div>
+          <div class="gallery-item shadow">
+            <img src="gallery-4.jpg" />
+          </div>
+          <div class="gallery-item shadow">
+            <img src="gallery-5.jpg" />
+          </div>
+          <div class="gallery-item shadow">
+            <img src="gallery-6.jpg" />
+          </div>
+          <div class="gallery-item shadow">
+            <img src="gallery-7.jpg" />
+          </div>
+          <div class="gallery-item shadow">
+            <img src="gallery-8.jpg" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--end of galley section-->
+
+    <!--image model-->
+    <!--<div id="img-modal-box">
+      <div id="img-modal">
+        <button type="button" id="modal-close-btn" class="flex">
+          <i class="fas fa-times"></i>
+        </button>
+        <button type="button" id="prev-btn" class="flex">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button type="button" id="next-btn" class="flex">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+        <img src="gallery-1.jpg" />
+      </div>
+    </div>
+--->
+    <!-- popular places section -->
+
+    <section id="popular" class="py-4">
+      <div class="title-wrap">
+        <span class="sm-title">know about some cool destination</span>
+        <h2 class="lg-title">Popular Places</h2>
+      </div>
+
+      <div class="popular-row">
+        <div class="popular-item shadow">
+          <img src="images/popular-1.jpg" alt="" />
+          <div>
+            <span>Eiffel Tower, Paris</span>
+            <ul class="rating flex">
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star-half-alt"></i></li>
+              <li>&nbsp;400 reviews</li>
+            </ul>
+            <p class="text">
+              "Crowned by its distinctive wrought-iron lattice, the Eiffel Tower
+              is an iconic symbol of Paris, France and a popular attraction for
+              visitors worldwide."
+            </p>
+          </div>
+        </div>
+
+        <div class="popular-item shadow">
+          <img src="images/popular-2.jpg" alt="" />
+          <div>
+            <span>Machu Picchu, Peru</span>
+            <ul class="rating flex">
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star-half-alt"></i></li>
+              <li>&nbsp;400 reviews</li>
+            </ul>
+            <p class="text">
+              "Machu Picchu is a stunning ancient Incan citadel nestled in the
+              Andes Mountains of Peru, known for its intricate stonework and
+              breathtaking panoramic views."
+            </p>
+          </div>
+        </div>
+
+        <div class="popular-item shadow">
+          <img src="images/popular-3.jpg" alt="" />
+          <div>
+            <span>Acropolis, Athens</span>
+            <ul class="rating flex">
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star-half-alt"></i></li>
+              <li>&nbsp;400 reviews</li>
+            </ul>
+            <p class="text">
+              Welcome to Athens - a city of ancient history and vibrant modern
+              culture. From the Acropolis to the bustling markets and delicious
+              cuisine, Athens offers unforgettable experiences."
+            </p>
+          </div>
+        </div>
+        <div class="popular-item shadow">
+          <img src="images/popular-4.jpg" alt="" />
+          <div>
+            <span>Bali, Indonesia</span>
+            <ul class="rating flex">
+              <li><i class="fas fa-star"></i></li>
+
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star-half-alt"></i></li>
+              <li>&nbsp;200 reviews</li>
+            </ul>
+            <p class="text">
+              Discover Bali, an Indonesian paradise known for stunning beaches,
+              lush forests, and ancient traditions. Experience adventure,
+              relaxation, and culture in this must-visit destination
+            </p>
+          </div>
+        </div>
+
+        <div class="popular-item shadow">
+          <img src="images/popular-5.jpg" alt="" />
+          <div>
+            <span>Dubai, United Arab Emirates</span>
+            <ul class="rating flex">
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star-half-alt"></i></li>
+              <li>&nbsp;400 reviews</li>
+            </ul>
+            <p class="text">
+              The UAE offers modern luxury and ancient traditions with iconic
+              architecture, desert landscapes, and world-class attractions.
+              Visit bustling Dubai or serene Al Ain for a unique Middle Eastern
+              experience."
+            </p>
+          </div>
+        </div>
+
+        <div class="popular-item shadow">
+          <img src="images/popular-6.jpg" alt="" />
+          <div>
+            <span>Bhutan</span>
+            <ul class="rating flex">
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star-half-alt"></i></li>
+              <li>&nbsp;400 reviews</li>
+            </ul>
+            <p class="text">
+              Experience Bhutan's natural beauty, vibrant culture, and unique
+              philosophy of Gross National Happiness. Explore ancient temples
+              and pristine forests for an authentic and sustainable travel
+              experience.
+            </p>
+          </div>
+        </div>
+
+        <div class="popular-item shadow">
+          <img src="images/popular-7.jpg" alt="" />
+          <div>
+            <span>Havana, Cuba</span>
+            <ul class="rating flex">
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star-half-alt"></i></li>
+              <li>&nbsp;400 reviews</li>
+            </ul>
+            <p class="text">
+              Experience Cuba's vibrant culture, colorful architecture, and rich
+              history. Explore Havana's historic streets and pristine beaches
+              for an unforgettable trip that blends Spanish, African, and
+              indigenous cultures.
+            </p>
+          </div>
+        </div>
+
+        <div class="popular-item shadow">
+          <img src="images/popular-8.jpg" alt="" />
+          <div>
+            <span>Moskva, Russia</span>
+            <ul class="rating flex">
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star-half-alt"></i></li>
+              <li>&nbsp;300 reviews</li>
+            </ul>
+            <p class="text">
+              Discover Moscow, Russia's capital of rich history and modernity.
+              Explore iconic landmarks like Red Square, St. Basil's Cathedral,
+              and the Kremlin, and immerse in unique cultural experiences
+              blending Eastern and Western cultures.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- end of popular places section -->
+    <!--footer-->
+    <footer class="py-4">
+      <div class="container footer-row">
+        <div class="footer-item">
+          <a href="home.html" class="site brand"> Back<span>Pack</span> </a>
+          <p class="text">
+            Backpack travel agencies offer budget-friendly packages and unique
+            experiences that guide adventurous souls to new and exciting
+            destinations, creating unforgettable travel memories.
+          </p>
+        </div>
+        <div class="footer-item">
+          <h2>Follow us on :</h2>
+          <ul class="social-links">
+            <li>
+              <a href="https://www.facebook.com/groups/999017747488761/">
+                <i class="fab fa-facebook-f"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#"> <i class="fab fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href="#"> <i class="fab fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="#"> <i class="fab fa-google-plus"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-item">
+          <h2>Popular Places</h2>
+          <ul>
+            <li><a href="#">Thailand</a></li>
+            <li><a href="#">Australia</a></li>
+            <li><a href="#">Maldives</a></li>
+            <li><a href="#">Switzerland</a></li>
+            <li><a href="#">Germany</a></li>
+          </ul>
+        </div>
+        <div class="Subscribe-form footer-item">
+          <h2>Subscribe for newsletter!</h2>
+          <form class="flex">
+            <input
+              type="email"
+              placeholder="Enter Email"
+              class="form-control"
+            />
+            <input type="submit" class="btn" value="subscribe" />
+          </form>
+        </div>
+      </div>
+    </footer>
+    <!--end of footer-->
+    <!--js-->
+    <script src="script.js"></script>
+    <!--<script>
+      const allGalleryItem = document.querySelectorAll(".gallery-item");
+      const imgModalDiv = document.getElementById("img-modal-box");
+      const modalCloseBtn = document.getElementById("modal-close-btn");
+      const nextBtn = document.getElementById("next-btn");
+      const prevBtn = document.getElementById("prev-btn");
+      let imgIndex = 0;
+
+      allGalleryItem.forEach((galleryItem) => {
+        galleryItem.addEventListener("click", () => {
+          imgModalDiv.style.display = "block";
+          let imgSrc = galleryItem.querySelector("img").src;
+
+          imgIndex = parseInt(imgSrc.split("- ")[1].substring(0, 1));
+          showImagecontent(imageIndex);
+        });
+      });
+      //next click//
+      nextBtn.addEventListener("click", () => {
+        imgIndex++;
+        if (imgIndex > allGalleryItem.length) {
+          imgIndex = 1;
+        }
+        showImageContent(imgIndex);
+      });
+
+      /*hadai mnb3de 3awdi chofi ymaha*/
+      //revious click//
+
+      function showImagecontent(index) {
+        function showImageContent(index) {
+          const imgFolder = "images";
+          const imgExtension = ".jpg";
+          const imgPath = imgFolder + "gallery-" + index + imgExtension;
+          imgModalDiv.querySelector("#img-modal img").src = imgPath;
+        }
+      }
+      modalCloseBtn.addEventListener("click", () => {
+        imgModalDiv.style.display = "none";
+      });
+    </script>
+    ---->
+  </body>
+</html>
